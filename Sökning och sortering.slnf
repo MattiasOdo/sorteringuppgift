@@ -1,0 +1,10 @@
+{
+  "solution": {
+    "path": "Sorteringuppgift.sln",
+    "projects": [
+      "Binärsökning\\Binärsökning.csproj",
+      "Bubblesort\\Bubblesort.csproj",
+      "Sorteringuppgift\\Sorteringuppgift.csproj"
+    ]
+  }
+}
