@@ -8,34 +8,54 @@ namespace Sorteringuppgift
 {
     class Program
     {
-        //linjärsökning
-        static int Numbsearch(List<int> numbs, int valeu)
+        
+        static int Binarysearch(String[] arr, String c)
         {
-            int firstnumb = 0;
-            int lastnumb = numbs.Count;
-            int index = (lastnumb - firstnumb) / 2;
-            while (numbs[index] != valeu)
+            int l = 0, r = arr.Length - 1;
+            while (l <= r)
             {
-                if (valeu < numbs[index])
+                int m = l + (r - l) / 2;
+
+                int res = c.CompareTo(arr[m]);
+
+                // Check if x is present at mid  
+                if (res == 0)
                 {
-                    if (valeu < numbs[index])
-                    {
-                        lastnumb = index - 1;
-                        index = (lastnumb - firstnumb) / 2;
-                    }
+                    return m;
                 }
+
+
+                // If x greater, ignore left half  
+                if (res > 0)
+                {
+                    l = m + 1;
+                }
+
+                // If x is smaller, ignore right half  
+                else
+                {
+                    r = m - 1;
+                }
+                    
             }
-            return -1;
+                return -1;
         }
         static void Main(string[] args)
         {
-            List<int> numbs = new List<int> { 1, 2, 3, 4, 8 };
+            String[] arr = { "Playsation 4","Playstation 3", };
+            String c = "ide";
+            int result = Binarysearch(arr, c);
 
-            int searchnumb = 2;
+            if (result == -1)
+            {
+                Console.WriteLine("Element not present");
+            }
 
-            int index = Numbsearch(numbs, searchnumb);
-            Console.WriteLine("Värdet " + searchnumb + " ligger på plats " + index);
-
+            else
+            {
+                Console.WriteLine("Element found at "+ "index " + result);
+            }
+                
 
         }
     }

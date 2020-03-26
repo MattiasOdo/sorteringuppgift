@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{20E6126B-0453-4A4E-9AEC-DB893F0AD884}</ProjectGuid>
+    <ProjectGuid>{F5CDD840-8EC7-4716-9AA6-F3354F0A3961}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Bubblesort</RootNamespace>
-    <AssemblyName>Bubblesort</AssemblyName>
+    <RootNamespace>Binarysearchnumb</RootNamespace>
+    <AssemblyName>Binarysearchnumb</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,8 +43,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConsoleBubble.cs" />
-    <Compile Include="Komintein.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
